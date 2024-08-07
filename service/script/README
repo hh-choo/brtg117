@@ -1,4 +1,4 @@
-1. tcp.ervice
+1. tcp.sh
 - tshark 이용 하여 패킷 감지 
     > tshark 는 wireshark를 text로 제공
 -  /usr/local/bin/ 에 위치한다
