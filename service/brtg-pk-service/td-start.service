@@ -1,0 +1,11 @@
+[Unit]
+Description=TCPDUMP CMD TCP,UDP Capture Service
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/td-start.sh
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
