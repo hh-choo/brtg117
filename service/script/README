@@ -11,3 +11,9 @@
 
 3. log_rotate.sh
 - /nfs/log/data.log을 10K 가 넘으면 압축시키는 스크립트
+
+4. td-tcp.sh
+-  tcpdump 이용 tcp 패킷 캡처
+
+5. td-udp.sh
+- tcpdump 이용 udp 패킷 캡처
