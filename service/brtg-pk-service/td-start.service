@@ -1,11 +1,13 @@
 [Unit]
-Description=TCPDUMP CMD TCP,UDP Capture Service
+Description=My Custom Service
 After=network.target
 
 [Service]
-ExecStart=/usr/local/bin/td-tcp.sh
-ExecStartPost=/usr/local/bin/td-udp.sh
-User=root
+Type=simple
+ExecStart=/bin/bash -c '/usr/local/bin/td-tcp.sh & /usr/local/bin/td-udp.sh & wait'
+ExecStop=/bin/bash -c 'killall td-tcp.sh; killall td-udp.sh'
+KillMode=control-group
+Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
