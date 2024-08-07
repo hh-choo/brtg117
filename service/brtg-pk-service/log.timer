@@ -1,0 +1,10 @@
+[Unit]
+Description=Runs log rotate script every 1 minutes
+
+[Timer]
+OnBootSec=10sec
+OnUnitActiveSec=10sec
+Unit=log_rotate.service
+
+[Install]
+WantedBy=timers.target
