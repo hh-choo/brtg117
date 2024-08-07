@@ -4,7 +4,7 @@ Description=Runs log rotate script every 1 minutes
 [Timer]
 OnBootSec=10sec
 OnUnitActiveSec=10sec
-Unit=log_rotate.service
+Unit=log-backup.service
 
 [Install]
 WantedBy=timers.target
