@@ -1,0 +1,12 @@
+[Unit]
+Description=Tshark Capture Service
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/tcp.sh
+ExecStartPost=/usr/local/bin/tcp-rm.sh
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
