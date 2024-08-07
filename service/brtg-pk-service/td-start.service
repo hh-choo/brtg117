@@ -3,8 +3,8 @@ Description=TCPDUMP CMD TCP,UDP Capture Service
 After=network.target
 
 [Service]
-ExecStart=/usr/local/bin/td-start.sh
-Restart=always
+ExecStart=/usr/local/bin/td-tcp.sh
+ExecStartPost=/usr/local/bin/td-udp.sh
 User=root
 
 [Install]
