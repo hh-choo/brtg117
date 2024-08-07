@@ -8,3 +8,6 @@
 - tcp.service 에서 tshark 명령어 기반으로 수집을 한다.
 - tshark 사용시 /var/tmp/ 디렉토리에 로그가 생기는데 해당 로그를 삭제를 위해 실행
 - 위에 생기는 로그는 사이즈가 엄청나서 삭제가 좋다고 판단하여 삭제 / 삭제해도 tshark에 영향 없음.
+
+3. log_rotate.sh
+- /nfs/log/data.log을 10K 가 넘으면 압축시키는 스크립트
