@@ -1,0 +1,13 @@
+[Unit]
+Description=TCPDump Service
+After=network.target
+
+[Service]
+ExecStart=/usr/sbin/tcpdump -i ens7 -w /nfs/log/data.log
+Restart=always
+User=root
+StandardOutput=file:/var/log/tcpdump.log
+StandardError=file:/var/log/tcpdump_error.log
+
+[Install]
+WantedBy=multi-user.target
